@@ -1,0 +1,106 @@
+2015-11-06 07:58:29 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\xampp\htdocs\assignment\src\Model\Table\OrdersTable.php, line 19]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-06 07:58:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /assignment/orders
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-06 07:59:47 Warning: Warning (4096): Argument 1 passed to App\Model\Table\OrdersTable::validationDefault() must be an instance of App\Model\Table\Validator, instance of Cake\Validation\Validator given, called in C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php on line 106 and defined in [C:\xampp\htdocs\assignment\src\Model\Table\OrdersTable.php, line 12]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 139
+App\Model\Table\OrdersTable::validationDefault() - APP/Model\Table\OrdersTable.php, line 12
+Cake\ORM\Table::validator() - CORE\src\Validation\ValidatorAwareTrait.php, line 106
+Cake\View\Form\EntityContext::_getValidator() - CORE\src\View\Form\EntityContext.php, line 404
+Cake\View\Form\EntityContext::isRequired() - CORE\src\View\Form\EntityContext.php, line 350
+Cake\View\Helper\FormHelper::_magicOptions() - CORE\src\View\Helper\FormHelper.php, line 1251
+Cake\View\Helper\FormHelper::_parseOptions() - CORE\src\View\Helper\FormHelper.php, line 1152
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1007
+include - APP/Template\Orders\add.ctp, line 6
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 972
+Cake\View\View::_render() - CORE\src\View\View.php, line 932
+Cake\View\View::render() - CORE\src\View\View.php, line 580
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 598
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-11-06 08:00:02 Warning: Warning (4096): Argument 1 passed to App\Model\Table\OrdersTable::validationDefault() must be an instance of App\Model\Table\Validator, instance of Cake\Validation\Validator given, called in C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Validation\ValidatorAwareTrait.php on line 106 and defined in [C:\xampp\htdocs\assignment\src\Model\Table\OrdersTable.php, line 12]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 139
+App\Model\Table\OrdersTable::validationDefault() - APP/Model\Table\OrdersTable.php, line 12
+Cake\ORM\Table::validator() - CORE\src\Validation\ValidatorAwareTrait.php, line 106
+Cake\View\Form\EntityContext::_getValidator() - CORE\src\View\Form\EntityContext.php, line 404
+Cake\View\Form\EntityContext::isRequired() - CORE\src\View\Form\EntityContext.php, line 350
+Cake\View\Helper\FormHelper::_magicOptions() - CORE\src\View\Helper\FormHelper.php, line 1251
+Cake\View\Helper\FormHelper::_parseOptions() - CORE\src\View\Helper\FormHelper.php, line 1152
+Cake\View\Helper\FormHelper::input() - CORE\src\View\Helper\FormHelper.php, line 1007
+include - APP/Template\Orders\add.ctp, line 6
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 972
+Cake\View\View::_render() - CORE\src\View\View.php, line 932
+Cake\View\View::render() - CORE\src\View\View.php, line 580
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 598
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-11-06 08:06:39 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\xampp\htdocs\assignment\src\Controller\OrdersController.php, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-06 08:06:39 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /assignment/orders
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-06 08:07:05 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\xampp\htdocs\assignment\src\Controller\OrdersController.php, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-06 08:07:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /assignment/orders
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-06 08:07:15 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [C:\xampp\htdocs\assignment\src\Controller\OrdersController.php, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-06 08:07:15 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /assignment/orders
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
