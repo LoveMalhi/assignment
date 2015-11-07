@@ -14,7 +14,28 @@ class OrdersTable extends Table
     {
         $validator
             ->notEmpty('name')
-            ->requirePresence('name');
+            ->requirePresence('name')
+			
+            ->notEmpty('address')
+            ->requirePresence('address')
+            ->notEmpty('city')
+            ->requirePresence('city')
+			->notEmpty('province')
+            ->requirePresence('province')
+            ->notEmpty('postal')
+            ->requirePresence('postal')
+            ->notEmpty('email')
+            ->requirePresence('email')
+			->add('email', 'validFormat', [
+            'rule' => 'email',
+            'message' => 'The email must be a valid email address'
+        ])
+			 ->notEmpty('telephone')
+            ->requirePresence('telephone')
+			->add('telephone', 'validFormat', [
+            'rule' => array('custom','[d{3}\-\d{3}\-\d{4}]'),
+            'message' => 'The telephone must be a valid'        ]);
+
         return $validator;
     }
 }
