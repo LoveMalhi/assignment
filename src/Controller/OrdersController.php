@@ -23,6 +23,7 @@ class OrdersController extends AppController
         $order = $this->Orders->newEntity();
         if ($this->request->is('post')) {
             $order = $this->Orders->patchEntity($order, $this->request->data);
+			 $order->user_id = $this->Auth->user('id');
             if ($this->Orders->save($order)) {
                 $this->Flash->success(__('Your order has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -54,6 +55,23 @@ public function delete($id)
         $this->Flash->success(__('The order with id: {0} has been deleted.', h($id)));
         return $this->redirect(['action' => 'index']);
     }
+}
+public function isAuthorized($user)
+{
+    // All registered users can add articles
+    if ($this->request->action === 'add') {
+        return true;
+    }
+
+    // The owner of an article can edit and delete it
+    if (in_array($this->request->action, ['edit', 'delete'])) {
+        $orderId = (int)$this->request->params['pass'][0];
+        if ($this->Orders->isOwnedBy($orderId, $user['id'])) {
+            return true;
+        }
+    }
+
+    return parent::isAuthorized($user);
 }
 }
 ?>

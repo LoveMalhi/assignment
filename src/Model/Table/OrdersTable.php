@@ -10,6 +10,10 @@ class OrdersTable extends Table
     {
         $this->addBehavior('Timestamp');
     }
+	public function isOwnedBy($orderId, $userId)
+{
+    return $this->exists(['id' => $orderId, 'user_id' => $userId]);
+}
 	 public function validationDefault(Validator $validator)
     {
         $validator
