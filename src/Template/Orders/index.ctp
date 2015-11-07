@@ -5,7 +5,17 @@
     <tr>
         <th>Id</th>
         <th>Name</th>
-        
+		<th>Address</th>
+		  <th>Postal</th>
+        <th>City</th>
+		<th>Province</th>
+      
+		<th>Telephone</th>
+        <th>Email</th>
+		<th>Size</th>
+        <th>Crust</th>
+		<th>Toppings</th>          
+<th></th>		
     </tr>
 
     <!-- Here is where we iterate through our $articles query object, printing out article info -->
@@ -15,6 +25,34 @@
         <td><?= $order->id ?></td>
         <td>
             <?= $this->Html->link($order->name, ['action' => 'view', $order->id]) ?>
+        </td>
+		  <td>
+            <?= $this->Html->link($order->address, ['action' => 'view', $order->id]) ?>
+        </td>
+		  <td>
+            <?= $this->Html->link($order->postal, ['action' => 'view', $order->id]) ?>
+        </td> 
+		  <td>
+            <?= $this->Html->link($order->city, ['action' => 'view', $order->id]) ?>
+        </td>
+		  <td>
+            <?= $this->Html->link($order->province, ['action' => 'view', $order->id]) ?>
+        </td>
+		
+		<td>
+            <?= $this->Html->link($order->telephone, ['action' => 'view', $order->id]) ?>
+        </td>
+		  <td>
+            <?= $this->Html->link($order->email, ['action' => 'view', $order->id]) ?>
+        </td>
+		  <td>
+            <?= $this->Html->link($order->size, ['action' => 'view', $order->id]) ?>
+        </td>
+		  <td>
+            <?= $this->Html->link($order->crust, ['action' => 'view', $order->id]) ?>
+        </td>
+		  <td>
+            <?= $this->Html->link($order->toppings, ['action' => 'view', $order->id]) ?>
         </td>
         <td>
 			    <?= $this->Form->postLink(

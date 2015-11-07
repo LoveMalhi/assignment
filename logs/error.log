@@ -104,3 +104,83 @@ Stack Trace:
 #2 {main}
 
 
+2015-11-07 04:41:00 Error: Fatal Error (4): syntax error, unexpected 'onion' (T_STRING) in [C:\xampp\htdocs\assignment\src\Template\Orders\add.ctp, line 17]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 04:41:01 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'onion' (T_STRING)
+Request URL: /assignment/orders/add
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 04:47:44 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\assignment\src\Template\Orders\add.ctp, line 19]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 04:47:44 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ';'
+Request URL: /assignment/orders/add
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 04:48:42 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\assignment\src\Template\Orders\add.ctp, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 04:48:43 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /assignment/orders/add
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 04:53:49 Error: Fatal Error (4): syntax error, unexpected ''Value 1'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\xampp\htdocs\assignment\src\Template\Orders\add.ctp, line 29]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 04:53:50 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ''Value 1'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /assignment/orders/add
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 29)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 04:59:23 Error: Fatal Error (4): syntax error, unexpected 'Value' (T_STRING), expecting ')' in [C:\xampp\htdocs\assignment\src\Template\Orders\add.ctp, line 22]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 04:59:23 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'Value' (T_STRING), expecting ')'
+Request URL: /assignment/orders/add
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 22)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
