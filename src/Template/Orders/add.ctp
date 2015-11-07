@@ -1,6 +1,6 @@
 <!-- File: src/Template/Articles/add.ctp -->
 
-<h1>Add ORDER</h1>
+<h1>ENTER YOUR PERSONAL AND ORDER DETAILS</h1>
 <?php
 		echo $this->Form->create($order);
 		echo $this->Form->input('name');
