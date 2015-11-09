@@ -15,6 +15,8 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+
+use Cake\Controller\Component;
 use Cake\Event\Event;
 /**
  * Application Controller
@@ -36,9 +38,8 @@ class AppController extends Controller
      */
     public function initialize()
     {
-        parent::initialize();
-        $this->loadComponent('Flash');
-		$this->loadComponent('Auth', [
+        $this->loadComponent('Flash');	
+        $this->loadComponent('Auth', [
             'loginRedirect' => [
                 'controller' => 'Orders',
                 'action' => 'index'
@@ -53,10 +54,9 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-
-	 $this->Auth->allow(['index', 'view', 'display']);
+        $this->Auth->allow(['index', 'view', 'display']);
     }
-public function isAuthorized($user)
+	public function isAuthorized($user)
 {
     // Admin can access every action
     if (isset($user['role']) && $user['role'] === 'admin') {
@@ -66,6 +66,8 @@ public function isAuthorized($user)
     // Default deny
     return false;
 }
+    //...
 }
     
 
+?>

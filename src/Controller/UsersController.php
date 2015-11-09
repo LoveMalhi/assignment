@@ -4,20 +4,17 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\Event;
 
-class UsersController extends AppController
+class UsersController extends AppController	
 {
-
-   public function beforeFilter(Event $event)
+public function beforeFilter(Event $event)
 {
     parent::beforeFilter($event);
     // Allow users to register and logout.
     // You should not add the "login" action to allow list. Doing so would
     // cause problems with normal functioning of AuthComponent.
-    $this->Auth->allow('login','add');
+    $this->Auth->allow(['add', 'logout']);
 }
-
-
-     public function index()
+ public function index()
      {
         $this->set('users', $this->Users->find('all'));
     }
@@ -28,26 +25,28 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
-    public function add()
+   public function add()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-                return $this->redirect(['action' => 'add']);
+				 $session = $this->request->session(); 
+                $session->write('user_id', $user);
+                return $this->redirect(['controller'=>'customers', 'action' => 'add']);
             }
             $this->Flash->error(__('Unable to add the user.'));
         }
         $this->set('user', $user);
     }
-
 public function login()
 {
     if ($this->request->is('post')) {
         $user = $this->Auth->identify();
         if ($user) {
-            $this->Auth->setUser($user);
+          $session = $this->request->session(); 
+                $session->write('user_id', $user);
             return $this->redirect($this->Auth->redirectUrl());
         }
         $this->Flash->error(__('Invalid username or password, try again'));
@@ -56,7 +55,9 @@ public function login()
 
 public function logout()
 {
+	    $this->request->session()->destroy();
     return $this->redirect($this->Auth->logout());
 }
+
 }
 ?>

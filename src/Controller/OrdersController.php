@@ -7,7 +7,8 @@ class OrdersController extends AppController
     {
         parent::initialize();
 
-        $this->loadComponent('Flash'); // Include the FlashComponent
+        $this->loadComponent('Flash'); 
+		// Include the FlashComponent
     }
 	 public function index()
     {
@@ -22,8 +23,7 @@ class OrdersController extends AppController
     {
         $order = $this->Orders->newEntity();
         if ($this->request->is('post')) {
-            $order = $this->Orders->patchEntity($order, $this->request->data);
-			 $order->user_id = $this->Auth->user('id');
+                  $this->request->data['Order']['user_id'] = $this->Auth->user('id');
             if ($this->Orders->save($order)) {
                 $this->Flash->success(__('Your order has been saved.'));
                 return $this->redirect(['action' => 'index']);
@@ -73,5 +73,6 @@ public function isAuthorized($user)
 
     return parent::isAuthorized($user);
 }
+
 }
 ?>

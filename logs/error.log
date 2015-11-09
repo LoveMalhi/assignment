@@ -1388,3 +1388,294 @@ Stack Trace:
 #2 {main}
 
 
+2015-11-07 15:34:55 Error: Fatal Error (1): Call to undefined method Cake\Controller\Component\AuthComponent::login() in [C:\xampp\htdocs\assignment\src\Controller\UsersController.php, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 15:34:56 Error: [Cake\Error\FatalErrorException] Call to undefined method Cake\Controller\Component\AuthComponent::login()
+Request URL: /assignment/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 15:36:29 Error: Fatal Error (1): Call to undefined method Cake\Controller\Component\AuthComponent::login() in [C:\xampp\htdocs\assignment\src\Controller\UsersController.php, line 48]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 15:36:30 Error: [Cake\Error\FatalErrorException] Call to undefined method Cake\Controller\Component\AuthComponent::login()
+Request URL: /assignment/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 15:51:30 Error: [Cake\Controller\Exception\MissingComponentException] Component class SessionComponent could not be found.
+Exception Attributes: array (
+  'class' => 'SessionComponent',
+  'plugin' => NULL,
+)
+Request URL: /assignment/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\Controller\ComponentRegistry->_throwMissingClassError('Session', NULL)
+#1 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(321): Cake\Core\ObjectRegistry->load('Session', Array)
+#2 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(462): Cake\Controller\Controller->loadComponent('Session', Array)
+#3 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#4 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#5 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(90): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#6 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 C:\xampp\htdocs\assignment\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2015-11-07 15:52:46 Error: [Cake\Controller\Exception\MissingComponentException] Component class SessionComponent could not be found.
+Exception Attributes: array (
+  'class' => 'SessionComponent',
+  'plugin' => NULL,
+)
+Request URL: /assignment/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\Controller\ComponentRegistry->_throwMissingClassError('Session', NULL)
+#1 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(321): Cake\Core\ObjectRegistry->load('Session', Array)
+#2 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(462): Cake\Controller\Controller->loadComponent('Session', Array)
+#3 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#4 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#5 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(90): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#6 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 C:\xampp\htdocs\assignment\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2015-11-07 15:52:53 Error: [Cake\Controller\Exception\MissingComponentException] Component class SessionComponent could not be found.
+Exception Attributes: array (
+  'class' => 'SessionComponent',
+  'plugin' => NULL,
+)
+Request URL: /assignment/users
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\Controller\ComponentRegistry->_throwMissingClassError('Session', NULL)
+#1 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(321): Cake\Core\ObjectRegistry->load('Session', Array)
+#2 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(462): Cake\Controller\Controller->loadComponent('Session', Array)
+#3 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#4 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#5 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(90): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#6 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 C:\xampp\htdocs\assignment\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2015-11-07 15:56:16 Error: Fatal Error (4): syntax error, unexpected '}', expecting ')' in [C:\xampp\htdocs\assignment\src\Controller\AppController.php, line 62]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 15:56:17 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}', expecting ')'
+Request URL: /assignment/users
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 62)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 15:56:53 Error: [Cake\Controller\Exception\MissingComponentException] Component class SessionComponent could not be found.
+Exception Attributes: array (
+  'class' => 'SessionComponent',
+  'plugin' => NULL,
+)
+Request URL: /assignment/users
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\Controller\ComponentRegistry->_throwMissingClassError('Session', NULL)
+#1 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(321): Cake\Core\ObjectRegistry->load('Session', Array)
+#2 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(462): Cake\Controller\Controller->loadComponent('Session', Array)
+#3 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php(265): Cake\Controller\Controller->_loadComponents()
+#4 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#5 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(90): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Users')
+#6 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(49): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#8 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(389): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventManager.php(355): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#10 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#11 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#12 C:\xampp\htdocs\assignment\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2015-11-07 15:58:07 Warning: Warning (4096): Argument 1 passed to Cake\Controller\Controller::beforeFilter() must be an instance of Cake\Event\Event, none given, called in C:\xampp\htdocs\assignment\src\Controller\UsersController.php on line 9 and defined in [C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php, line 713]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 139
+Cake\Controller\Controller::beforeFilter() - CORE\src\Controller\Controller.php, line 713
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 9
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 385
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 355
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 478
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-11-07 15:58:09 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /assignment/users
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\assignment\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-07 15:58:10 Warning: Warning (4096): Argument 1 passed to Cake\Controller\Controller::beforeFilter() must be an instance of Cake\Event\Event, none given, called in C:\xampp\htdocs\assignment\src\Controller\UsersController.php on line 9 and defined in [C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php, line 713]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 139
+Cake\Controller\Controller::beforeFilter() - CORE\src\Controller\Controller.php, line 713
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 9
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 385
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 355
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 478
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-11-07 15:58:10 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /assignment/users
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\assignment\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-07 15:58:45 Warning: Warning (4096): Argument 1 passed to Cake\Controller\Controller::beforeFilter() must be an instance of Cake\Event\Event, none given, called in C:\xampp\htdocs\assignment\src\Controller\UsersController.php on line 13 and defined in [C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php, line 713]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 139
+Cake\Controller\Controller::beforeFilter() - CORE\src\Controller\Controller.php, line 713
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 13
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 385
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 355
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 478
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-11-07 15:58:54 Warning: Warning (4096): Argument 1 passed to Cake\Controller\Controller::beforeFilter() must be an instance of Cake\Event\Event, none given, called in C:\xampp\htdocs\assignment\src\Controller\UsersController.php on line 13 and defined in [C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Controller\Controller.php, line 713]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 139
+Cake\Controller\Controller::beforeFilter() - CORE\src\Controller\Controller.php, line 713
+App\Controller\UsersController::beforeFilter() - APP/Controller\UsersController.php, line 13
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 385
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 355
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 478
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2015-11-07 16:33:55 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\assignment\src\Controller\AppController.php, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-07 16:33:56 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /assignment/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 59)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-07 16:39:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Users could not be found.
+Exception Attributes: array (
+  'class' => 'Users',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assignment/users/add
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-11-09 02:35:05 Error: Fatal Error (4): syntax error, unexpected '*' in [C:\xampp\htdocs\assignment\src\Controller\UsersController.php, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-09 02:35:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '*'
+Request URL: /assignment/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-11-09 05:51:55 Error: Fatal Error (1): Class 'App\Controller\Controller' not found in [C:\xampp\htdocs\assignment\src\Controller\AppController.php, line 28]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-09 05:51:59 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Controller' not found
+Request URL: /assignment/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\xampp\\htdocs...', 28)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

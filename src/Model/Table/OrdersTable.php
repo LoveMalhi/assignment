@@ -41,6 +41,11 @@ class OrdersTable extends Table
             'message' => 'The telephone must be a valid'        ]);
 
         return $validator;
-    }
+ 
+   }
+   public function isOwnedBy($orderId, $userId)
+{
+    return $this->exists(['id' => $orderId, 'user_id' => $userId]);
+}
 }
 ?>
