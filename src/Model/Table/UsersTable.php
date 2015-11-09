@@ -6,7 +6,18 @@ use Cake\Validation\Validator;
 
 class UsersTable extends Table
 {
-
+ public function initialize(array $config)
+    {
+        parent::initialize($config);
+        $this->table('users');
+        $this->displayField('id');
+        $this->primaryKey('id');
+    }
+	 public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->isUnique(['username']));
+        return $rules;
+    }
     public function validationDefault(Validator $validator)
     {
         return $validator
