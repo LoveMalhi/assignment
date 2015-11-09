@@ -1,4 +1,4 @@
- 
+<?PHP echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));?> 
 <div class="container">
     <div class="row">
        <?php echo $this->Form->create($order); ?>

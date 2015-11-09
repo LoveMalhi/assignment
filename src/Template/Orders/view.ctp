@@ -1,3 +1,4 @@
+<?PHP echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));?>
 <table>
     <tr>
         <th>Id</th>
@@ -12,7 +13,7 @@
         <td><?= $order->pizzaSize?></td>
         <td><?= $order->crustType?></td>
         <td><?= $order->toppings?></td>
-        <td><?= 'CAD '.$this->Number->precision($order->total, 2) ?></td>
+        <td><?= '$'.$this->Number->precision($order->total, 2) ?></td>
         <td>
             <?= $this->Html->link('Mark as completed', ['action' => 'complete', $order->id]) ?>
         </td>

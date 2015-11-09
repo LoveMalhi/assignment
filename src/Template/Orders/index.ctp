@@ -1,8 +1,7 @@
 
-
-<p>
 <h3><?= $this->Html->link('CLICK HERE !!!!!!TO MAKE YOUR ORDER', ['action' => 'add']) ?></h3>
-</p>
+<?PHP echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));?>
+
 <h1>Present Orders</h1>
 <table>
     <tr>
@@ -20,7 +19,7 @@
         <td>
             <?= $this->Html->link($order->pizzaSize, ['action' => 'view', $order->id]) ?>
         </td>
-        <td><?= 'CAD '.$this->Number->precision($order->total, 2) ?></td>
+        <td><?= '$ '.$this->Number->precision($order->total, 2) ?></td>
         <td>
             <?= $this->Form->postLink(
                 'Delete',

@@ -1,5 +1,5 @@
 <!-- File: src/Template/Articles/add.ctp -->
-
+<?PHP echo $this->Html->link('Log out', array('controller' => 'users', 'action' => 'logout'));?>
 <div class="container">
     <div class="row">
         <?php 
