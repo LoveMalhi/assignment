@@ -1,10 +1,54 @@
-<!-- File: src/Template/Articles/edit.ctp -->
-
-<h1>Edit Article</h1>
-<?php
-   echo $this->Form->create($order);
-    echo $this->Form->input('name');
-   
-    echo $this->Form->button(__('Save Order'));
-    echo $this->Form->end();
-	?>
+  <?php echo $this->Form->create($order); ?>
+<div class="container">
+    <div class="row">
+      
+        <fieldset> <legend>Order Information</legend>
+            <div class="form-group col-lg-6 col-sm-12">
+            
+                <label>Pizza Size</label>
+                <?php
+                    echo $this->Form->radio('pizzaSize',
+                        [
+                            ['value' => 'Small', 'text' => 'Small'],
+                            ['value' => 'Med', 'text' => 'Medium'],
+                            ['value' => 'Large', 'text' => 'Large'],
+                            ['value' => 'XL', 'text' => 'X-Large']
+                        ],
+                        ['default' => 'Small']
+                    ); 
+                ?>
+                <label>Crust Type</label>
+                <?php
+                    $crustType = ['Hand-tossed' => 'Hand-tossed', 'Pan' => 'Pan', 'Stuffed' => 'Stuffed', 'Thin' => 'Thin'];
+                    echo $this->Form->radio('crustType', $crustType, ['default' => 'Hand-tossed']);
+                ?>
+            </div>
+            <div class="form-group col-lg-6 col-sm-12">
+                <label>Toppings</label>
+                <?php
+                        $toppings = ['Bacon' => 'Bacon', 
+                                     'Salami' => 'Salami', 
+                                     'Peperoni' => 'Peperoni', 
+                                     'Ham' => 'Ham', 
+                                     'ExtraCheese' => 'Extra Cheese', 
+                                     'Tomato' => 'Tomato', 
+                                     'Olives' => 'Olives', 
+                                     'Broccoli' => 'Broccoli', 
+                                     'GarlicSauce' => 'Garlic Sauce', 
+                                     'TomatoSauce' => 'Tomato Sauce'
+                                    ];
+                        echo $this->Form->input('toppings', 
+                                                array('label' => false,
+                                                    'type' => 'select',
+                                                    'multiple'=>'checkbox',
+                                                    'options' => $toppings)
+                                                      ); 
+                    ?>
+            </div>
+        </fieldset>
+         <?php
+            echo $this->Form->button(__('Save Order')); 
+            echo $this->Form->end();
+        </div>
+	</div>
+?>

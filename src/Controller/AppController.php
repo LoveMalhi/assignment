@@ -38,8 +38,10 @@ class AppController extends Controller
      */
     public function initialize()
     {
-        $this->loadComponent('Flash');	
+        $this->loadComponent('Flash');
+        $this->loadComponent('RequestHandler');		
         $this->loadComponent('Auth', [
+		'authorize' => ['Controller'],
             'loginRedirect' => [
                 'controller' => 'Orders',
                 'action' => 'index'
