@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use App\Controller\AppController;
+use Cake\Event\Event;
 class OrdersController extends AppController
 {
 	 public function initialize()
@@ -16,7 +18,7 @@ class OrdersController extends AppController
     }
 	 public function index()
     {
-         $this->set('orders', $this->Orders->find('all'));
+         $this->set('orders', $this->Orders->newEntity());
 		  $user = $this->Auth->user();
         if (!parent::isAuthorized($user)) {
             $session = $this->request->session();
@@ -37,7 +39,7 @@ class OrdersController extends AppController
     {
         $order = $this->Orders->get($id, [
             'contain' => [] ]);
-        $this->set(compact('order'));
+         $this->set('order', $order);
 		  $this->set('_serialize', ['order']);
     }
 	public function add()
@@ -46,12 +48,12 @@ class OrdersController extends AppController
         if ($this->request->is('post')) {
 			$session = $this->request->session();
 			  
-              			  $this->request->data['Order']['user_id'] = $this->Auth->user('id');
+              			  $this->request->data[customer] = $session->read('customer_id');
 $order = $this->Orders->patchEntity($order, $this->request->data);
             
             $order = $this->calculateTotal($order);    
 	if ($this->Orders->save($order)) {
-                $this->Flash->success(__('Your order has been saved.'));
+                $this->Flash->success(__('Done.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Unable to add your order.'));
@@ -86,13 +88,13 @@ $order = $this->Orders->patchEntity($order, $this->request->data);
 		
         $pizzaSize = $order->pizzaSize;	
 		switch ($pizzaSize){
-			case "Small":
+			case "S":
 				$total += 5;
 				break;
-			case "Med":
+			case "M":
 				$total += 10;
 				break;
-			case "Large":
+			case "L":
 				$total += 15;
 				break;
 			case "XL":
@@ -123,14 +125,15 @@ $order = $this->Orders->patchEntity($order, $this->request->data);
             case 'QC':
                 $tax = 14.975;
 				break;
-             case 'MB':
-                $tax = 8;
-				break;
              case 'ON':
                 $tax = 13;
 				break;
-             case 'SK':
+             case 'Sk':
                 $tax = 10;
+				break;
+             case 'MB':
+                $tax = 8;
+                $tax = 8;
 				break;
              default:
                 $tax = 1;
@@ -144,17 +147,19 @@ $order = $this->Orders->patchEntity($order, $this->request->data);
 	public function edit($id = null)
 {
     $order = $this->Orders->get($id, ['contain' => []]);
-		if ($this->request->is(['post', 'put'])) {
-        $this->Orders->patchEntity($order, $this->request->data);
+		if ($this->request->is(['patch', 'post', 'put'])) {
+          $order = $this->Orders->patchEntity($order, $this->request->data);
+            
+            $order = $this->calculateTotal($order);
         if ($this->Orders->save($order)) {
             $this->Flash->success(__('Your order has been updated.'));
             return $this->redirect(['action' => 'index']);
         }
 		else {
         $this->Flash->error(__('Unable to update your order.'));
-    }
+    }                          
 		}
-    $this->set('order', $order);
+     $this->set(compact('order'));
 	$this->set('_serialize', ['order']);
 }
 public function delete($id = null)
@@ -163,7 +168,7 @@ public function delete($id = null)
 
     $order = $this->Orders->get($id);
     if ($this->Orders->delete($order)) {
-        $this->Flash->success(__('The order with id: {0} has been deleted.', h($id)));
+        $this->Flash->success(__('The order  has been deleted.', h($id)));
         
     }
 	else {
@@ -173,9 +178,7 @@ public function delete($id = null)
     }
 	 public function complete($id = null)
     {
-        $order = $this->Orders->get($id, [
-            'contain' => []
-        ]);
+        $order = $this->Orders->get($id, ['contain' => []]);
         $order = $this->Orders->patchEntity($order, $this->request->data);
         $order->completed = 1;
         echo $order;
@@ -192,19 +195,15 @@ public function isAuthorized($user)
 {
     // All registered users can add articles
     if ($this->request->action === 'add') {
-        return true;
-    }
-
-    // The owner of an article can edit and delete it
-    if (in_array($this->request->action, ['edit', 'delete'])) {
-        $orderId = (int)$this->request->params['pass'][0];
-        if ($this->Orders->isOwnedBy($orderId, $user['id'])) {
-            return true;
+ return true;
         }
+        
+        if (in_array($this->request->action, ['edit', 'delete', 'complete'])) {
+            return parent::isAuthorized($user);
+         
+      
+        }
+        return parent::isAuthorized($user);
     }
-
-    return parent::isAuthorized($user);
-}
-
 }
 ?>

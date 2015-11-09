@@ -2056,3 +2056,19 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2015-11-09 09:52:35 Error: Fatal Error (1): Undefined constant 'App\Model\Table\App\Model\Entity\Order' in [C:\xampp\htdocs\assignment\src\Model\Table\OrdersTable.php, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2015-11-09 09:52:41 Error: [Cake\Error\FatalErrorException] Undefined constant 'App\Model\Table\App\Model\Entity\Order'
+Request URL: /assignment/
+Stack Trace:
+#0 C:\xampp\htdocs\assignment\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Undefined const...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

@@ -1,4 +1,4 @@
-<h1>Current users</h1>
+<h1>List of Users</h1>
 <table>
     <tr>
         <th>Id</th>
@@ -6,7 +6,7 @@
         <th>Role</th>
     </tr>
 
-<!-- Here's where we loop through our $users query object, printing out user info -->
+
 
     <?php foreach ($users as $user): ?>
     <tr>

@@ -2,6 +2,7 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
+use App\Model\Entity\User;
 use Cake\Validation\Validator;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
@@ -26,8 +27,8 @@ class UsersTable extends Table
             ->notEmpty('password', 'A password is required')
             ->notEmpty('role', 'A role is required')
             ->add('role', 'inList', [
-                'rule' => ['inList', ['admin', 'author']],
-                'message' => 'Please enter a valid role'
+                'rule' => ['inList', ['admin', 'customer']],
+                'message' => 'Enter a valid role'
             ]);
     }
 

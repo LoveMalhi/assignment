@@ -1,4 +1,4 @@
-<h1>Customers</h1>
+<h1>List Of Customers</h1>
 <table>
     <tr>
         <th>Id</th>
@@ -12,7 +12,7 @@
     <tr>
         <td><?= $customer->id ?></td>
         <td>
-            <?= $customer->personName ?>
+            <?= $customer->Name ?>
         </td>
         <td><?= $customer->phone ?></td>
         <td><?= $customer->city ?></td>

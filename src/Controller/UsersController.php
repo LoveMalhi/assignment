@@ -14,10 +14,18 @@ public function beforeFilter(Event $event)
     // cause problems with normal functioning of AuthComponent.
     $this->Auth->allow(['add', 'logout']);
 }
+ public function isAuthorized($user)
+    {
+        return parent::isAuthorized($user);
+    }
  public function index()
      {
+		 
+        $user = $this->Auth->user();
+        if ($this->isAuthorized($user)) {
         $this->set('users', $this->Users->find('all'));
     }
+	 }
 
     public function view($id)
     {
@@ -45,11 +53,20 @@ public function login()
     if ($this->request->is('post')) {
         $user = $this->Auth->identify();
         if ($user) {
+			$this->Auth->setUser($user);
           $session = $this->request->session(); 
                 $session->write('user_id', $user);
+				
+				     $this->loadModel('Customers');
+                $res = $this->Customers->find()->where(['user' => $user['id']]);
+                $data = $res->toArray();
+                if (isset($data[0])){
+                    $session->write('customer_id',  $data[0]['id']);
+                    $session->write('customer_province',  $data[0]['province']);
+                }
             return $this->redirect($this->Auth->redirectUrl());
         }
-        $this->Flash->error(__('Invalid username or password, try again'));
+        $this->Flash->error(__('Incorrect username or password, try again'));
     }
 }
 

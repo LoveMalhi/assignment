@@ -5,16 +5,16 @@
         <div class="form-group col-lg-6 col-sm-12">
             <?php
                 echo $this->Form->create($customer); ?>
-            <fieldset> <legend>Personal Information</legend>
+            <fieldset> <legend>Enter Personal Information</legend>
             <?php
-                echo $this->Form->input('personName', array('class'=>'form-control'));
+                echo $this->Form->input('Name', array('class'=>'form-control'));
                 echo $this->Form->input('phone', array('class'=>'form-control', 'size'=>'13'));
                 echo $this->Form->input('email', array('class'=>'form-control')); ?>
                 <fieldset> <legend>Address</legend>
                <?php 
                     echo $this->Form->input('street', array('class'=>'form-control')); 
                     echo $this->Form->input('province', array(
-                        'options' => array('QC', 'MB', 'ON', 'SK'),
+                        'options' => array('QC', 'ON', 'SK', 'MB'),
                         'empty' => 'Select'
                     ));
                     echo $this->Form->input('city', array('class'=>'form-control'));
@@ -23,7 +23,7 @@
                 </fieldset>
             </fieldset>
              <?php
-                echo $this->Form->button(__('Save Customer')); 
+                echo $this->Form->button(__('Save')); 
                 echo $this->Form->end();
             ?>
         </div>

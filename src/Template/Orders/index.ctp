@@ -1,10 +1,9 @@
 
-<img src ="/img/image1.jpg" height="100" width="850">
-<?= $this->Html->link('CLICK HERE !!!!!!TO MAKE YOUR ORDER', ['action' => 'add']) ?>
+
 <p>
-<h3><?= $this->Html->link('==> Order here <==', ['action' => 'add']) ?></h3>
+<h3><?= $this->Html->link('CLICK HERE !!!!!!TO MAKE YOUR ORDER', ['action' => 'add']) ?></h3>
 </p>
-<h1>Current orders</h1>
+<h1>Present Orders</h1>
 <table>
     <tr>
         <th>Id</th>
@@ -13,7 +12,7 @@
         <th>Actions</th>
     </tr>
 
-<!-- Here's where we loop through our $orders query object, printing out order info -->
+
 
     <?php foreach ($orders as $order): ?>
     <tr>
@@ -35,7 +34,7 @@
 
 </table>
 
-<h1>Past orders</h1>
+<h1>List of Previous Orders</h1>
 <table>
     <tr>
         <th>Id</th>
@@ -52,7 +51,7 @@
         <td>
             <?= $this->Html->link($order->pizzaSize, ['action' => 'view', $order->id]) ?>
         </td>
-        <td><?= 'CAD '.$this->Number->precision($order->total, 2) ?></td>
+        <td><?= '$'.$this->Number->precision($order->total, 2) ?></td>
         <td>
             <?= $this->Form->postLink(
                 'Delete',

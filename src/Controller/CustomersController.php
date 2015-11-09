@@ -45,7 +45,7 @@ class CustomersController extends AppController
          $customer = $this->Customers->patchEntity($customer, $this->request->data);
           $customer->user = $user_session['id'];
            if ($this->Customers->save($customer)) {
-                $this->Flash->success(__('Your customer has been saved.'));
+                $this->Flash->success(__('Customer has been saved.'));
               
                $session->write('customer_id', $customer->id);
                
@@ -61,13 +61,14 @@ class CustomersController extends AppController
             case 0:
                 return 'QC';
              case 1:
-                return 'MB';
-             case 2:
                 return 'ON';
-             case 3:
+             case 2:
                 return 'SK';
+             case 3:
+                return 'MB';
              default:
                 return '';
         }
     }
 }
+?>

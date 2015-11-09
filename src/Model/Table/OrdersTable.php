@@ -5,12 +5,13 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
+use App\Model\Entity\Order;
 
 class OrdersTable extends Table
 {
     public function initialize(array $config)
     {
-        $this->addBehavior('Timestamp');
+       // $this->addBehavior('Timestamp');
 		  parent::initialize($config);
         $this->table('orders');
         $this->displayField('id');
@@ -26,7 +27,7 @@ class OrdersTable extends Table
         return $validator;
  
    }
-   public function isOwnedBy($orderId, $userId)
+   public function isOwnedBy($customerId)
 {
     return $this->exists(['customer'=>$customerId]);
 }
